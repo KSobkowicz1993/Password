@@ -1,0 +1,8 @@
+Zadanie wykonujemy za pomoc¹ jQuery.
+Pole formularza do wprowadzenia has³a.
+Po klikniêciu na link "poka¿ znaki" (obok tego pola) pokazuj¹ siê
+znaki has³a (znika maskowanie has³a). Zmienia siê te¿ tekst linku na "ukryj znaki".
+
+Zadanie dodatkowe: zliczaj aktualn¹ iloœæ znaków w polu wpisywania has³a i wyœwietl to w przygotowanym span-ie.
+
+Uwaga! Nie mo¿esz modyfikowaæ pliku HTML!
