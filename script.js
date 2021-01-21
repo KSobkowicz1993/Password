@@ -5,7 +5,7 @@ $(function () {
     const a = $('a');
     let pass = $('#pass');
     let numberOfSign = $('#znaki');
-    let counter = 0;
+    let counter = 1;
 
     //liczy dobrze pod warunkiem ze wpisze sie haslo od razu bez uzycia backspace :(
 
