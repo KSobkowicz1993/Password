@@ -8,7 +8,7 @@ $(function () {
     const show = 'Pokaż znaki';
     const hide = 'Ukryj znaki';
 
-    let numberOfSign = $('#znaki');
+    const numberOfSign = $('#znaki');
 
     //Pokaz/ukryj znaki hasła
     a.on('click', function (e) {
@@ -31,9 +31,9 @@ $(function () {
         // console.log(passLength);
         numberOfSign.text(passLength);
 
-        if(passLength === 16){
+        if (passLength === 16) {
             alert('Hasło może mieć maksymalnie 16 znaków!');
         }
-        
+
     });
 });
