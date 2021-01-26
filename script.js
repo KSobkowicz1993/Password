@@ -3,15 +3,14 @@
 $(function () {
 
     const a = $('a');
-    let pass = $('#pass');
+    const pass = $('#pass');
 
-    let show = 'Pokaż znaki';
-    let hide = 'Ukryj znaki';
+    const show = 'Pokaż znaki';
+    const hide = 'Ukryj znaki';
 
     let numberOfSign = $('#znaki');
 
     //Pokaz/ukryj znaki hasła
-
     a.on('click', function (e) {
         e.preventDefault();
 
@@ -23,21 +22,14 @@ $(function () {
             pass.attr('type', 'password')
             a.text(show);
         }
+    });
 
-        //Zliczanie liczby znaków w haśle
-        let passLength = pass.val().length;
+    //Zliczanie liczby znaków w haśle
+    pass.on('keyup', () => {
+
+        const passLength = pass.val().length;
+        // console.log(passLength);
         numberOfSign.text(passLength);
 
     });
-
-    // pass.on('keydown', () => {
-
-    //     let passLength = pass.val().length;
-
-    //     if (passLength <= 15){
-
-    //         console.log(passLength);
-    //         numberOfSign.text(passLength+1);
-    //     } 
-    // });
 });
