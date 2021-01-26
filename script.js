@@ -4,34 +4,40 @@ $(function () {
 
     const a = $('a');
     let pass = $('#pass');
+
+    let show = 'Pokaż znaki';
+    let hide = 'Ukryj znaki';
+
     let numberOfSign = $('#znaki');
-    let counter = 1;
 
-    //liczy dobrze pod warunkiem ze wpisze sie haslo od razu bez uzycia backspace :(
-
-    pass.on('keydown', () => {
-
-        if (counter <= 16) {
-
-            console.log(counter);
-            numberOfSign.html(counter);
-
-            counter++;
-
-        } else {
-            alert('Dozwolona liczba znaków to 16!');
-        }
-
-    });
+    //Pokaz/ukryj znaki hasła
 
     a.on('click', function (e) {
-
         e.preventDefault();
 
-        pass.attr('type', 'text');
+        if (a.text() == show) {
+            pass.attr('type', 'text');
+            a.text(hide);
 
-        a.html('Ukryj znaki');
+        } else {
+            pass.attr('type', 'password')
+            a.text(show);
+        }
+
+        //Zliczanie liczby znaków w haśle
+        let passLength = pass.val().length;
+        numberOfSign.text(passLength);
 
     });
 
+    // pass.on('keydown', () => {
+
+    //     let passLength = pass.val().length;
+
+    //     if (passLength <= 15){
+
+    //         console.log(passLength);
+    //         numberOfSign.text(passLength+1);
+    //     } 
+    // });
 });
